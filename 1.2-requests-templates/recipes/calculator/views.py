@@ -1,4 +1,7 @@
+from django.core.paginator import Paginator
+from django.http import HttpResponse
 from django.shortcuts import render
+
 
 DATA = {
     'omlet': {
@@ -18,6 +21,27 @@ DATA = {
     },
     # можете добавить свои рецепты ;)
 }
+
+def omlet(request):
+    recipe = DATA['omlet']
+    context = { 
+        recipe.items()
+    }
+    return render(request, 'index.html', context)
+
+def pasta(request):
+    recipe = DATA['pasta']
+    context = { 
+        recipe.items()
+    }
+    return render(request, 'index.html', context)
+def buter(request):
+    recipe = DATA['buter']
+    context = { 
+        recipe.items()
+    }
+    return render(request, 'index.html', context)
+
 
 # Напишите ваш обработчик. Используйте DATA как источник данных
 # Результат - render(request, 'calculator/index.html', context)
