@@ -23,29 +23,26 @@ DATA = {
 }
 
 def omlet(request):
-    
+    servings = int(request.GET.get('servings', 1))
+    recept= {key:  (value*servings) for key, value in DATA['omlet'].items()}
     context = { 
-        'recipe': DATA['omlet'],
-        'servings': 1, 
-        
+        'recipe': recept,
     }
     return render(request, '/home/vladimir/учеба/dj-homeworks/1.2-requests-templates/recipes/calculator/templates/calculator/index.html', context)
 
 def pasta(request):
-    
+    servings = int(request.GET.get('servings', 1))
+    recept= {key:  (value*servings) for key, value in DATA['pasta'].items()}
     context = { 
-        'recipe': DATA['pasta'],
-        'servings': 1, 
-        
+        'recipe': recept,                
     }
     return render(request, '/home/vladimir/учеба/dj-homeworks/1.2-requests-templates/recipes/calculator/templates/calculator/index.html', context)
 
 def buter(request):
-    
+    servings = int(request.GET.get('servings', 1))
+    recept= {key:  (value*servings) for key, value in DATA['buter'].items()}
     context = { 
-        'recipe': DATA['buter'],
-        'servings': 1, 
-        
+        'recipe': recept,
     }
     return render(request, '/home/vladimir/учеба/dj-homeworks/1.2-requests-templates/recipes/calculator/templates/calculator/index.html', context)
 
