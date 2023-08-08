@@ -23,24 +23,31 @@ DATA = {
 }
 
 def omlet(request):
-    recipe = DATA['omlet']
+    
     context = { 
-        recipe.items()
+        'recipe': DATA['omlet'],
+        'servings': 1, 
+        
     }
-    return render(request, 'index.html', context)
+    return render(request, '/home/vladimir/учеба/dj-homeworks/1.2-requests-templates/recipes/calculator/templates/calculator/index.html', context)
 
 def pasta(request):
-    recipe = DATA['pasta']
+    
     context = { 
-        recipe.items()
+        'recipe': DATA['pasta'],
+        'servings': 1, 
+        
     }
-    return render(request, 'index.html', context)
+    return render(request, '/home/vladimir/учеба/dj-homeworks/1.2-requests-templates/recipes/calculator/templates/calculator/index.html', context)
+
 def buter(request):
-    recipe = DATA['buter']
+    
     context = { 
-        recipe.items()
+        'recipe': DATA['buter'],
+        'servings': 1, 
+        
     }
-    return render(request, 'index.html', context)
+    return render(request, '/home/vladimir/учеба/dj-homeworks/1.2-requests-templates/recipes/calculator/templates/calculator/index.html', context)
 
 
 # Напишите ваш обработчик. Используйте DATA как источник данных
