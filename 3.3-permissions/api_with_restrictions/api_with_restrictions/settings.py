@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 from pathlib import Path
-from advertisements.info_database import user_name, password
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -99,8 +99,7 @@ DATABASES = {
         'NAME': 'netology_classified_ads',
         'HOST': '127.0.0.1',
         'PORT': '5432',
-        'USER': user_name,
-        'PASSWORD': password,
+        
     }
 }
 
