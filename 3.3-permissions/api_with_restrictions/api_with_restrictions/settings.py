@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 from pathlib import Path
-from advertisements.database import user_name, password
+from advertisements.info_database import user_name, password
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
