@@ -1,5 +1,0 @@
-django == 4.2.2
-datetime == 5.1
-
-
-
